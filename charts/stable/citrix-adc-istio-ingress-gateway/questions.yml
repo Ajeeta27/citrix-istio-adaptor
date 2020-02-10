@@ -1,0 +1,9 @@
+labels:
+  io.rancher.certified: partner
+questions:
+- variable: citrixCPX
+  required: false
+  type: bool
+  description: "Set to true to set ingress as cpx"
+  label: citrixcpx flag
+  group: "Deployment Settings"
