@@ -3,7 +3,7 @@ labels:
 questions:
 - variable: citrixCPX
   required: false
-  type: bool
+  type: boolean
   description: "Set to true to set ingress as cpx"
   label: citrixcpx flag
   group: "Deployment Settings"
