@@ -53,3 +53,67 @@ questions:
   - "Always"
   - "IfNotPresent"
   - "Never"
+- variable: istioAdaptor.image
+  required: true
+  type: string
+  default: "quay.io/citrix/citrix-istio-adaptor"
+  description: "istioAdaptor Image"
+  label: istioAdaptor Image
+  group: "istioAdaptor Settings"
+- variable: istioAdaptor.tag
+  required: true
+  type: int
+  default: 1.1.0
+  description: "istioAdaptor Image tag"
+  label: istioAdaptor tag
+  group: "istioAdaptor Settings"
+- variable: istioAdaptor.imagePullPolicy
+  required: true
+  type: enum
+  default: IfNotPresent
+  description: "istioAdaptor imagePullPolicy"
+  label: istioAdaptor imagePullPolicy
+  options:
+  - "Always"
+  - "IfNotPresent"
+  - "Never"
+  group: "istioAdaptor Settings"
+- variable: istioAdaptor.netscalerUrl
+  required: true
+  type: string
+  default: null
+  description: "istioAdaptor netscalerUrl"
+  label: istioAdaptor netscalerUrl
+  group: "istioAdaptor Settings"
+- variable: istioAdaptor.proxyType
+  required: true
+  type: string
+  default: router
+  description: "istioAdaptor proxyType"
+  label: istioAdaptor proxyType
+  group: "istioAdaptor Settings"
+- variable: istioAdaptor.secureConnect
+  required: true
+  type: boolean
+  default: true
+  description: "istioAdaptor secureConnect"
+  label: istioAdaptor secureConnect
+  group: "istioAdaptor Settings"
+- variable: istioAdaptor.vserverIP
+  required: false
+  type: string
+  description: "istioAdaptor vserverIP"
+  label: istioAdaptor vserverIP
+  group: "istioAdaptor Settings"
+- variable: istioAdaptor.netProfile
+  required: false
+  type: string
+  description: "istioAdaptor netProfile"
+  label: istioAdaptor netProfile
+  group: "istioAdaptor Settings"
+- variable: istioAdaptor.ADMIP
+  required: false
+  type: string
+  description: "istioAdaptor ADMIP"
+  label: istioAdaptor ADMIP
+  group: "istioAdaptor Settings"
