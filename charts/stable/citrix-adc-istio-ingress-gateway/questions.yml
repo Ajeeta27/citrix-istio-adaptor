@@ -44,10 +44,10 @@ questions:
   group: "metricExporter Settings"
 - variable: metricExporter.imagePullPolicy
   required: true
-  type: string
+  type: enum
   default: IfNotPresent
-  description: "metricExporter IfNotPresent"
-  label: metricExporter IfNotPresent
+  description: "metricExporter imagePullPolicy"
+  label: metricExporter imagePullPolicy
   group: "metricExporter Settings"
   options:
   - "Always"
