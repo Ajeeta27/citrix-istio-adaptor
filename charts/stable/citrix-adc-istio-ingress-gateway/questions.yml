@@ -7,3 +7,49 @@ questions:
   description: "Set to true to set ingress as cpx"
   label: citrixcpx flag
   group: "Deployment Settings"
+- variable: metricExporter.image
+  required: true
+  type: string
+  default: "quay.io/citrix/citrix-adc-metrics-exporter"
+  description: "Exporter Image"
+  label: Exporter Image
+  group: "metricExporter Settings"
+- variable: metricExporter.version
+  required: true
+  type: int
+  default: 1.2
+  description: "metricExporter Image version"
+  label: metricExporter Version
+  group: "metricExporter Settings"
+- variable: metricExporter.port
+  required: true
+  type: int
+  default: 8888
+  description: "metricExporter port"
+  label: metricExporter Version
+  group: "metricExporter Settings"
+- variable: metricExporter.secure
+  required: true
+  type: string
+  default: 8888
+  description: "metricExporter secure"
+  label: metricExporter secure
+  group: "metricExporter Settings"
+- variable: metricExporter.logLevel
+  required: true
+  type: string
+  default: ERROR
+  description: "metricExporter logLevel"
+  label: metricExporter logLevel
+  group: "metricExporter Settings"
+- variable: metricExporter.imagePullPolicy
+  required: true
+  type: string
+  default: IfNotPresent
+  description: "metricExporter IfNotPresent"
+  label: metricExporter IfNotPresent
+  group: "metricExporter Settings"
+  options:
+  - "Always"
+  - "IfNotPresent"
+  - "Never"
