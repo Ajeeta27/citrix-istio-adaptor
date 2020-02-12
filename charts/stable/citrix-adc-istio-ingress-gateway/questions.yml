@@ -5,7 +5,7 @@ questions:
   required: false
   type: boolean
   description: "Set to true to set ingress as cpx"
-  label: citrixcpx flag
+  label: Citrixcpx flag
   group: "Deployment Settings"
 - variable: metricExporter.image
   required: true
@@ -37,11 +37,17 @@ questions:
   group: "metricExporter Settings"
 - variable: metricExporter.logLevel
   required: true
-  type: string
+  type: enum
   default: ERROR
   description: "metricExporter logLevel"
   label: metricExporter logLevel
   group: "metricExporter Settings"
+  options:
+  - "DEBUG"
+  - "INFO"
+  - "WARNING"
+  - "ERROR"
+  - "TRACE"
 - variable: metricExporter.imagePullPolicy
   required: true
   type: enum
@@ -79,7 +85,7 @@ questions:
   - "Never"
   group: "istioAdaptor Settings"
 - variable: istioAdaptor.netscalerUrl
-  required: true
+  required: false
   type: string
   default: null
   description: "istioAdaptor netscalerUrl"
@@ -117,3 +123,127 @@ questions:
   description: "istioAdaptor ADMIP"
   label: istioAdaptor ADMIP
   group: "istioAdaptor Settings"
+- variable: istioPilot.name
+  required: true
+  type: string
+  default: istio-pilot
+  description: "istio-pilot name"
+  label: istio-pilot name
+  group: "istio-pilot Settings"
+- variable: istioPilot.namespace
+  required: true
+  type: string
+  default: istio-system
+  description: "istio-pilot namespace"
+  label: istio-pilot namespace
+  group: "istio-pilot Settings"
+- variable: istioPilot.secureGrpcPort
+  required: true
+  type: int
+  default: 15011
+  description: "istio-pilot secure gRPC Port"
+  label: istio-pilot secureGrpcPort
+  group: "istio-pilot Settings"
+- variable: istioPilot.insecureGrpcPort
+  required: true
+  type: int
+  default: 15010
+  description: "istio-pilot insecure gRPC Port"
+  label: istio-pilot insecureGrpcPort
+  group: "istio-pilot Settings"
+- variable: istioPilot.SAN
+  required: true
+  type: string
+  default: "spiffe://cluster.local/ns/istio-system/sa/istio-pilot-service-account"
+  description: "istio-pilot "
+  label: istio-pilot SAN
+  group: "istio-pilot Settings"
+- variable: ingressGateway.image
+  required: true
+  type: string
+  default: "quay.io/citrix/citrix-k8s-cpx-ingress"
+  description: "ingressGateway Image"
+  label: ingressGateway Image
+  group: "ingressGateway Settings"
+- variable: ingressGateway.tag
+  required: true
+  type: int 
+  default: 13.0-41.28
+  description: "ingressGateway tag"
+  label: ingressGateway tag
+  group: "ingressGateway Settings"
+- variable: ingressGateway.imagePullPolicy
+  required: true
+  type: enum
+  default: IfNotPresent
+  description: "ingressGateway imagePullPolicy"
+  label: ingressGateway imagePullPolicy
+  group: "ingressGateway Settings"
+  options:
+  - "DEBUG"
+  - "INFO"
+  - "WARNING"
+  - "ERROR"
+  - "TRACE"
+- variable: ingressGateway.EULA
+  required: true
+  type: string
+  default: NO
+  description: "ingressGateway EULA licence"
+  label: ingressGateway EULA
+  group: "ingressGateway Settings"
+- variable: ingressGateway.mgmtHttpPort
+  required: true
+  type: int
+  default: 10080
+  description: "ingressGateway mgmtHttpPort"
+  label: ingressGateway mgmtHttpPort
+  group: "ingressGateway Settings"
+- variable: ingressGateway.mgmtHttpsPort
+  required: true
+  type: int
+  default: 10443
+  description: "ingressGateway mgmtHttpsPort"
+  label: ingressGateway mgmtHttpsPort
+  group: "ingressGateway Settings"
+- variable: ingressGateway.httpNodePort
+  required: true
+  type: int
+  default: 30180
+  deseription: "ingressGateway httpNodePort"
+  label: ingressGateway httpNodePort
+  group: "ingressGateway Settings"
+- variable: ingressGateway.httpsNodePort
+  required: true
+  type: int
+  default: 301443
+  deseription: "ingressGateway httpsNodePort"
+  label: ingressGateway httpsNodePort
+  group: "ingressGateway Settings"
+- variable: ingressGateway.lightWeightCPX
+  required: true
+  type: string
+  default: YES
+  deseription: "ingressGateway set to be lightWeightCPX"
+  label: ingressGateway lightWeightCPX
+  group: "ingressGateway Settings"
+- variable: ingressGateway.secretVolumes
+  required: true
+  type: string
+  default: YES
+  deseription: "ingressGateway set to be secretVolumes"
+  label: ingressGateway secretVolumes
+  group: "ingressGateway Settings"
+- variable: ingressGateway.licenseServerIP
+  required: false
+  type: int
+  deseription: "ingressGateway set to be licenseServerIP"
+  label: ingressGateway licenseServerIP
+  group: "ingressGateway Settings"
+- variable: ingressGateway.licenseServerPort
+  required: true
+  type: int
+  default: 27000
+  deseription: "ingressGateway set to be licenseServerPort"
+  label: ingressGateway licenseServerPort
+  group: "ingressGateway Settings"
