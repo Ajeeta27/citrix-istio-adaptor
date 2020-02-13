@@ -268,5 +268,5 @@ questions:
   required: false
   type: string
   description: "set password"
-  label: nslogin ingressGateway
-  group: "nslogin Settings
+  label: nslogin password
+  group: "nslogin Settings"
