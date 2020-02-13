@@ -179,11 +179,9 @@ questions:
   label: ingressGateway imagePullPolicy
   group: "ingressGateway Settings"
   options:
-  - "DEBUG"
-  - "INFO"
-  - "WARNING"
-  - "ERROR"
-  - "TRACE"
+  - "Always"
+  - "IfNotPresent"
+  - "Never"
 - variable: ingressGateway.EULA
   required: true
   type: string
