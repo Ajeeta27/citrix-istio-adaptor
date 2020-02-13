@@ -11,7 +11,7 @@ questions:
   required: true
   type: string
   default: "quay.io/citrix/citrix-adc-metrics-exporter"
-  description: "Exporter Image"
+  description: "Exporter Image to be used"
   label: Exporter Image
   group: "metricExporter Settings"
 - variable: metricExporter.version
@@ -26,13 +26,13 @@ questions:
   type: int
   default: 8888
   description: "metricExporter port"
-  label: metricExporter Version
+  label: metricExporter Port
   group: "metricExporter Settings"
 - variable: metricExporter.secure
   required: true
   type: string
-  default: 8888
-  description: "metricExporter secure"
+  default: "YES"
+  description: "metricExporter set to true for secure"
   label: metricExporter secure
   group: "metricExporter Settings"
 - variable: metricExporter.logLevel
@@ -162,14 +162,13 @@ questions:
   required: true
   type: string
   default: "quay.io/citrix/citrix-k8s-cpx-ingress"
-  description: "ingressGateway Image"
+  description: "ingressGateway Image to be used"
   label: ingressGateway Image
   group: "ingressGateway Settings"
 - variable: ingressGateway.tag
   required: true
   type: int 
   default: 13.0-41.28
-  description: "ingressGateway tag"
   label: ingressGateway tag
   group: "ingressGateway Settings"
 - variable: ingressGateway.imagePullPolicy
@@ -228,9 +227,8 @@ questions:
   label: ingressGateway lightWeightCPX
   group: "ingressGateway Settings"
 - variable: ingressGateway.secretVolumes
-  required: true
+  required: false
   type: string
-  default: YES
   deseription: "ingressGateway set to be secretVolumes"
   label: ingressGateway secretVolumes
   group: "ingressGateway Settings"
@@ -247,3 +245,28 @@ questions:
   deseription: "ingressGateway set to be licenseServerPort"
   label: ingressGateway licenseServerPort
   group: "ingressGateway Settings"
+- variable: ingressGateway.label
+  required: true
+  type: string
+  default: "citrix-ingressgateway"
+  deseription: "set label of ingressGateway"
+  label: ingressGateway label
+  group: "ingressGateway Settings"
+- variable: ingressGateway.tcpPort
+  required: false
+  type: int
+  deseription: "set tcpPort of ingressGateway in VPX case"
+  label: ingressGateway tcpPort
+  group: "ingressGateway Settings"
+- variable: nslogin.username
+  required: false
+  type: string
+  deseription: "set username"
+  label: nslogin username 
+  group: "nslogin Settings"
+- variable: nslogin.password
+  required: false
+  type: string
+  deseription: "set password"
+  label: nslogin ingressGateway
+  group: "nslogin Settings
