@@ -209,64 +209,64 @@ questions:
   required: true
   type: int
   default: 30180
-  deseription: "ingressGateway httpNodePort"
+  description: "ingressGateway httpNodePort"
   label: ingressGateway httpNodePort
   group: "ingressGateway Settings"
 - variable: ingressGateway.httpsNodePort
   required: true
   type: int
   default: 301443
-  deseription: "ingressGateway httpsNodePort"
+  description: "ingressGateway httpsNodePort"
   label: ingressGateway httpsNodePort
   group: "ingressGateway Settings"
 - variable: ingressGateway.lightWeightCPX
   required: true
   type: string
   default: YES
-  deseription: "ingressGateway set to be lightWeightCPX"
+  description: "ingressGateway set to be lightWeightCPX"
   label: ingressGateway lightWeightCPX
   group: "ingressGateway Settings"
 - variable: ingressGateway.secretVolumes
   required: false
   type: string
-  deseription: "ingressGateway set to be secretVolumes"
+  description: "ingressGateway set to be secretVolumes"
   label: ingressGateway secretVolumes
   group: "ingressGateway Settings"
 - variable: ingressGateway.licenseServerIP
   required: false
   type: int
-  deseription: "ingressGateway set to be licenseServerIP"
+  description: "ingressGateway set to be licenseServerIP"
   label: ingressGateway licenseServerIP
   group: "ingressGateway Settings"
 - variable: ingressGateway.licenseServerPort
   required: true
   type: int
   default: 27000
-  deseription: "ingressGateway set to be licenseServerPort"
+  description: "ingressGateway set to be licenseServerPort"
   label: ingressGateway licenseServerPort
   group: "ingressGateway Settings"
 - variable: ingressGateway.label
   required: true
   type: string
   default: "citrix-ingressgateway"
-  deseription: "set label of ingressGateway"
+  description: "set label of ingressGateway"
   label: ingressGateway label
   group: "ingressGateway Settings"
 - variable: ingressGateway.tcpPort
   required: false
   type: int
-  deseription: "set tcpPort of ingressGateway in VPX case"
+  description: "set tcpPort of ingressGateway in VPX case"
   label: ingressGateway tcpPort
   group: "ingressGateway Settings"
 - variable: nslogin.username
   required: false
   type: string
-  deseription: "set username"
+  description: "set username"
   label: nslogin username 
   group: "nslogin Settings"
 - variable: nslogin.password
   required: false
   type: string
-  deseription: "set password"
+  description: "set password"
   label: nslogin ingressGateway
   group: "nslogin Settings
