@@ -49,8 +49,7 @@ ingressGateway:
       name:
       nodePort:
       port:
-      targetPot:
-     
+      targetPort:
 
 nslogin:
    username:
