@@ -230,13 +230,13 @@ questions:
   description: "ingressGateway set to be secretVolumes name"
   label: ingressGateway secretVolumes name
   group: "ingressGateway Settings"
-variable: ingressGateway.secretVolumes[0].secretName
+- variable: ingressGateway.secretVolumes[0].secretName
   required: false
   type: string
   description: "ingressGateway set to be secretVolumes secretName"
   label: ingressGateway secretVolumes secretName
   group: "ingressGateway Settings"
-variable: ingressGateway.secretVolumes[0].mountPath
+- variable: ingressGateway.secretVolumes[0].mountPath
   required: false
   type: string
   description: "ingressGateway set to be secretVolumes mountPath"
