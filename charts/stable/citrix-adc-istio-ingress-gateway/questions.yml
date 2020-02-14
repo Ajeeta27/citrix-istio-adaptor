@@ -2,8 +2,9 @@ labels:
   io.rancher.certified: partner
 questions:
 - variable: citrixCPX
-  required: false
+  required: true
   type: boolean
+  default: true
   description: "Set to true to set ingress as cpx"
   label: Citrixcpx flag
   group: "Deployment Settings"
@@ -185,7 +186,7 @@ questions:
 - variable: ingressGateway.EULA
   required: true
   type: string
-  default: NO
+  default: YES
   description: "ingressGateway EULA licence"
   label: ingressGateway EULA
   group: "ingressGateway Settings"
@@ -241,7 +242,7 @@ questions:
 - variable: ingressGateway.secretVolumes[0].mountPath
   required: false
   type: string
-  deafult: "/etc/istio/test-ingressgateway-certs"
+  default: "/etc/istio/test-ingressgateway-certs"
   description: "ingressGateway set to be secretVolumes mountPath"
   label: ingressGateway secretVolumes mountPath
   group: "ingressGateway Settings"
