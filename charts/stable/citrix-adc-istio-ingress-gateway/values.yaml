@@ -42,9 +42,9 @@ ingressGateway:
     httpsNodePort: 31443
     lightWeightCPX: YES
     secretVolumes:
-	name:
-	secretName:
-	mountPath:
+      name:
+      secretName:
+      mountPath:
     licenseServerIP:
     licenseServerPort: 27000 
     label: citrix-ingressgateway
