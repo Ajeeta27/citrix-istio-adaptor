@@ -213,7 +213,7 @@ questions:
 - variable: ingressGateway.httpsNodePort
   required: true
   type: int
-  default: 301443
+  default: 31443
   description: "ingressGateway httpsNodePort"
   label: ingressGateway httpsNodePort
   group: "ingressGateway Settings"
@@ -227,18 +227,21 @@ questions:
 - variable: ingressGateway.secretVolumes[0].name
   required: false
   type: string
+  default: test-ingressgateway-certs
   description: "ingressGateway set to be secretVolumes name"
   label: ingressGateway secretVolumes name
   group: "ingressGateway Settings"
 - variable: ingressGateway.secretVolumes[0].secretName
   required: false
   type: string
+  default: test-ingressgateway-certs
   description: "ingressGateway set to be secretVolumes secretName"
   label: ingressGateway secretVolumes secretName
   group: "ingressGateway Settings"
 - variable: ingressGateway.secretVolumes[0].mountPath
   required: false
   type: string
+  deafult: "/etc/istio/test-ingressgateway-certs"
   description: "ingressGateway set to be secretVolumes mountPath"
   label: ingressGateway secretVolumes mountPath
   group: "ingressGateway Settings"
@@ -265,24 +268,28 @@ questions:
 - variable: ingressGateway.tcpPort[0].name
   required: false
   type: string
+  default: tcp1 
   description: "set tcpPort of ingressGateway in VPX case and give name"
   label: ingressGateway tcpPortname
   group: "ingressGateway Settings"
 - variable: ingressGateway.tcpPort[0].nodePort
   required: false
   type: int
+  default: 30000
   description: "set tcpPort of ingressGateway in VPX case and give nodePort"
   label: ingressGateway tcpPort nodePort
   group: "ingressGateway Settings"
 - variable: ingressGateway.tcpPort[0].port
   required: false
   type: int
+  default: 10000
   description: "set tcpPort of ingressGateway in VPX case and give Port"
   label: ingressGateway tcpPort Port
   group: "ingressGateway Settings"
 - variable: ingressGateway.tcpPort[0].targetPort
   required: false
   type: int
+  default: 5000
   description: "set tcpPort of ingressGateway in VPX case and give targetPort"
   label: ingressGateway tcpPort targetPort
   group: "ingressGateway Settings"
