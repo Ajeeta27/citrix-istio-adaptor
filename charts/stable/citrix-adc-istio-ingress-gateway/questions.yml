@@ -250,11 +250,29 @@ questions:
   description: "set label of ingressGateway"
   label: ingressGateway label
   group: "ingressGateway Settings"
-- variable: ingressGateway.tcpPort
+- variable: ingressGateway.tcpPort.name
+  required: false
+  type: string
+  description: "set tcpPort of ingressGateway in VPX case and give name"
+  label: ingressGateway tcpPortname
+  group: "ingressGateway Settings"
+- variable: ingressGateway.tcpPort.nodePort
   required: false
   type: int
-  description: "set tcpPort of ingressGateway in VPX case"
-  label: ingressGateway tcpPort
+  description: "set tcpPort of ingressGateway in VPX case and give nodePort"
+  label: ingressGateway tcpPort nodePort
+  group: "ingressGateway Settings"
+- variable: ingressGateway.tcpPort.port
+  required: false
+  type: int
+  description: "set tcpPort of ingressGateway in VPX case and give Port"
+  label: ingressGateway tcpPort Port
+  group: "ingressGateway Settings"
+- variable: ingressGateway.tcpPort.targetPort
+  required: false
+  type: int
+  description: "set tcpPort of ingressGateway in VPX case and give targetPort"
+  label: ingressGateway tcpPort targetPort
   group: "ingressGateway Settings"
 - variable: nslogin.username
   required: false
