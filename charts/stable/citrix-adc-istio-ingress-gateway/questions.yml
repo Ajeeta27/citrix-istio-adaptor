@@ -224,11 +224,23 @@ questions:
   description: "ingressGateway set to be lightWeightCPX"
   label: ingressGateway lightWeightCPX
   group: "ingressGateway Settings"
-- variable: ingressGateway.secretVolumes
+- variable: ingressGateway.secretVolumes[0].name
   required: false
   type: string
-  description: "ingressGateway set to be secretVolumes"
-  label: ingressGateway secretVolumes
+  description: "ingressGateway set to be secretVolumes name"
+  label: ingressGateway secretVolumes name
+  group: "ingressGateway Settings"
+variable: ingressGateway.secretVolumes[0].secretName
+  required: false
+  type: string
+  description: "ingressGateway set to be secretVolumes secretName"
+  label: ingressGateway secretVolumes secretName
+  group: "ingressGateway Settings"
+variable: ingressGateway.secretVolumes[0].mountPath
+  required: false
+  type: string
+  description: "ingressGateway set to be secretVolumes mountPath"
+  label: ingressGateway secretVolumes mountPath
   group: "ingressGateway Settings"
 - variable: ingressGateway.licenseServerIP
   required: false
