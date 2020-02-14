@@ -45,7 +45,7 @@ ingressGateway:
     licenseServerIP:
     licenseServerPort: 27000 
     label: citrix-ingressgateway
-    tcpPort: []
+    tcpPort: {}
       name:
       nodePort:
       port:
