@@ -1,0 +1,180 @@
+labels:
+  io.rancher.certified: partner
+questions:
+- variable: istioAdaptor.image
+  required: true
+  type: string
+  default: "quay.io/citrix/citrix-istio-adaptor"
+  description: "istioAdaptor Image"
+  label: istioAdaptor Image
+  group: "istioAdaptor Settings"
+- variable: istioAdaptor.tag
+  required: true
+  type: int
+  default: 1.1.0
+  description: "istioAdaptor Image tag"
+  label: istioAdaptor tag
+  group: "istioAdaptor Settings"
+- variable: istioAdaptor.imagePullPolicy
+  required: true
+  type: enum
+  default: IfNotPresent
+  description: "istioAdaptor imagePullPolicy"
+  label: istioAdaptor imagePullPolicy
+  options:
+  - "Always"
+  - "IfNotPresent"
+  - "Never"
+  group: "istioAdaptor Settings"
+- variable: istioAdaptor.netscalerUrl
+  required: false
+  type: string
+  default: "http://127.0.0.1"
+  description: "istioAdaptor netscalerUrl"
+  label: istioAdaptor netscalerUrl
+  group: "istioAdaptor Settings"
+- variable: istioAdaptor.proxyType
+  required: true
+  type: string
+  default: sidecar
+  description: "istioAdaptor proxyType"
+  label: istioAdaptor proxyType
+  group: "istioAdaptor Settings"
+- variable: istioAdaptor.secureConnect
+  required: true
+  type: boolean
+  default: true
+  description: "istioAdaptor secureConnect"
+  label: istioAdaptor secureConnect
+  group: "istioAdaptor Settings"
+- variable: istioAdaptor.ADMIP
+  required: false
+  type: string
+  description: "istioAdaptor ADMIP"
+  label: istioAdaptor ADMIP
+  group: "istioAdaptor Settings"
+- variable: istioPilot.name
+  required: true
+  type: string
+  default: istio-pilot
+  description: "istio-pilot name"
+  label: istio-pilot name
+  group: "istio-pilot Settings"
+- variable: istioPilot.namespace
+  required: true
+  type: string
+  default: istio-system
+  description: "istio-pilot namespace"
+  label: istio-pilot namespace
+  group: "istio-pilot Settings"
+- variable: istioPilot.secureGrpcPort
+  required: true
+  type: int
+  default: 15011
+  description: "istio-pilot secure gRPC Port"
+  label: istio-pilot secureGrpcPort
+  group: "istio-pilot Settings"
+- variable: istioPilot.insecureGrpcPort
+  required: true
+  type: int
+  default: 15010
+  description: "istio-pilot insecure gRPC Port"
+  label: istio-pilot insecureGrpcPort
+  group: "istio-pilot Settings"
+- variable: istioPilot.SAN
+  required: true
+  type: string
+  default: "spiffe://cluster.local/ns/istio-system/sa/istio-pilot-service-account"
+  description: "istio-pilot "
+  label: istio-pilot SAN
+  group: "istio-pilot Settings"
+- variable: cpxProxy.image
+  required: true
+  type: string
+  default: "quay.io/citrix/citrix-k8s-cpx-ingress"
+  description: "cpxProxy image name"
+  label: cpxProxy image
+  group: "cpxProxy Settings"
+- variable: cpxProxy.tag
+  required: true
+  type: int
+  default: 13.0-41.28
+  description: "cpxProxy image tag"
+  label: cpxProxy tag
+  group: "cpxProxy Settings"
+- variable: cpxProxy.imagePullPolicy
+  required: true
+  type: enum
+  default: IfNotPresent
+  description: "cpxProxy imagePullPolicy"
+  label: cpxProxy imagePullPolicy
+  options:
+  - "Always"
+  - "IfNotPresent"
+  - "Never"
+- variable: cpxProxy.EULA
+  required: true
+  type: string
+  default: NO
+  description: "cpxProxy EULA"
+  label: cpxProxy EULA
+  group: "cpxProxy Settings"
+- variable: cpxProxy.cpxSidecarMode
+  required: true
+  type: string
+  default: YES
+  description: "cpxProxy cpxSidecarMode"
+  label: cpxProxy cpxSidecarMode
+  group: "cpxProxy Settings"
+- variable: cpxProxy.mgmtHttpPort
+  required: true
+  type: int
+  default: 10080
+  description: "cpxProxy mgmtHttpPort"
+  label: cpxProxy mgmtHttpPort
+  group: "cpxProxy Settings"
+- variable: cpxProxy.mgmtHttpsPort
+  required: true
+  type: int
+  default: 10443
+  description: "cpxProxy mgmtHttpsPort"
+  label: cpxProxy mgmtHttpsPort
+  group: "cpxProxy Settings"
+- variable: cpxProxy.licenseServerPort
+  required: true
+  type: int
+  default: 27000
+  description: "cpxProxy licenseServerPort"
+  label: cpxProxy licenseServerPort
+  group: "cpxProxy Settings"
+- variable: sidecarWebHook.webhookImage
+  required: true
+  type: string
+  default: "gcr.io/istio-release/sidecar_injector"
+  description: "sidecarWebHook webhookImage"
+  label: sidecarWebHook webhookImage
+  group: "sidecarWebHook Settings"
+- variable: sidecarWebHook.webhookImageVersion
+  required: true
+  type: int
+  default: 1.0.0
+  description: "sidecarWebHook webhookImageVersion"
+  label: sidecarWebHook webhookImageVersion
+  group: "sidecarWebHook Settings"
+- variable: sidecarWebHook.imagePullPolicy
+  required: true
+  type: enum
+  default: IfNotPresent
+  description: "sidecarWebHook imagePullPolicy"
+  label: sidecarWebHook imagePullPolicy
+  options:
+  - "Always"
+  - "IfNotPresent"
+  - "Never"
+- variable: webhook.injectionLabelName
+  required: true
+  type: string
+  default: "cpx-injection"
+  description: "webhook injectionLabelName"
+  label: webhook injectionLabelName
+  group: "webhook Settings"
