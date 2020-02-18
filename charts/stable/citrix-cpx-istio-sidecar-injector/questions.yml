@@ -112,6 +112,7 @@ questions:
   - "Always"
   - "IfNotPresent"
   - "Never"
+  group: "cpxProxy Settings"
 - variable: cpxProxy.EULA
   required: true
   type: string
@@ -171,6 +172,7 @@ questions:
   - "Always"
   - "IfNotPresent"
   - "Never"
+  group: "sidecarWebHook Settings"
 - variable: webhook.injectionLabelName
   required: true
   type: string
@@ -178,3 +180,4 @@ questions:
   description: "webhook injectionLabelName"
   label: webhook injectionLabelName
   group: "webhook Settings"
+
