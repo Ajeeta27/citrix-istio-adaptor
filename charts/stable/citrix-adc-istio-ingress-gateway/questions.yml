@@ -297,13 +297,12 @@ questions:
 - variable: nslogin.username
   required: false
   type: string
-  default: nsroot
+  default: 
   description: "set username"
   label: nslogin username 
   group: "nslogin Settings"
 - variable: nslogin.password
   required: false
   type: string
-  default: nsroot
+  default: 
   description: "set password"
-
